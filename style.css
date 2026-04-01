@@ -1,0 +1,671 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    list-style: none;
+    box-sizing: border-box;
+}
+.navbar{
+    width: 100%;
+    height: 15vh;
+    background-color: rgb(100, 163, 226);
+    display: flex;
+    justify-content: space-around;
+}
+.heading{
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    font-family: 'KoHo', sans-serif;
+    padding-top: 45px;
+    font-weight: bold;
+}
+.lies{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    font-size: 21px;
+    color: white;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'KoHo', sans-serif;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+.lies > p:hover{
+  color: rgb(213, 197, 197);
+}
+.inpBar{
+    width: 100%;
+    height: 13vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+input{
+    width: 23%;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-left: 35%;
+}
+.addBtn{
+    width: 7%;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.addBtn:hover{
+    background-color: rgb(100, 163, 226);
+    transition-duration: .5s;
+    color: white;
+}
+.notesContainer{
+    width: 100%;
+    height: auto;
+    background-color: whitesmoke;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;     
+}
+.note {
+  width: 22%;
+  height: 450px;
+  background-image: url(./stickynote.jpg) ;
+  background-size: 100% 100%;
+  position: relative;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  transform: skewY(1.9deg);
+}
+.note:hover {
+  transform: scale(1.05) translateY(-5px);
+  transition-duration: .5s;
+}
+.note:hover .upperDiv {
+  background-color: rgb(18, 18, 18);
+}
+.noteText {
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+  padding-left: 16%;
+  color: #000;
+  z-index: 1;
+  word-wrap: break-word;
+  width: 90%;
+}
+.noteTime {
+  position: absolute;
+  top: 15%;
+  left: 64%; 
+  font-size: 19px;
+  font-family: 'KoHo', sans-serif;
+  color: #111010;
+  z-index: 1;
+  font-family: 'Dancing Script', cursive;
+}
+.noteDate {
+  position: absolute;
+  bottom: 17%;
+  text-align: center;
+  font-size: 19px;
+  font-family: 'Dancing Script', cursive;
+  color: #0c0b0b;
+  z-index: 1;
+  transform: skewY(1.9deg);
+  font-weight: bold;
+}
+.noteHeading {
+  font-family: 'Dancing Script', cursive;
+  font-size: 33px;
+  color: #333;
+  text-align: center;
+  position: absolute;
+  bottom: 62%;
+  z-index: 1;
+  font-weight: bolder;
+}
+ .upperDiv {
+  z-index: 2;
+  width: 63%;
+  height: 35px;
+  background-color: gray;
+  position: absolute;
+  top: 18px;
+  left: 19%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  transform: skewY(1.4deg);  
+}
+.leftContainer {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.rightContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  padding-right: 7px;
+}
+.editInput{
+  width : 79%;
+  height: 25px;
+  font-size: 16px;
+  border-radius: 7px;
+  margin-top: 6px;
+  margin-left: 20px;
+}
+.saveBtn{
+  width: 30%;
+  height: 23px;
+  margin-top: 7px;
+  border-radius: 4px;
+}
+.saveBtn:hover{
+  background-color: rgb(100, 163, 226);
+}
+
+
+
+
+
+ /* @media (max-width: 1420px) and (min-width: 1000px){
+.navbar{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid #000;
+}
+.heading{
+  font-size: 30px;
+  padding-: 30px;
+  border: 1px solid #342020;
+}
+.lies{
+margin-top: 30px;
+margin-left: 20px; 
+font-size: 20px;
+border: 1px solid #5c0a0a;
+}
+
+
+}  */
+
+
+@media (max-width : 1420px) and (min-width : 1240px){
+ .notesContainer{
+  display: flex;
+ justify-content: flex-start , space-evenly;
+}
+ 
+  .note{
+    width: 29%;
+  }
+
+.noteTime{
+  position: absolute;
+  left: 57%;
+}
+.noteDate{
+  text-align: center;
+}
+
+}
+
+
+
+@media (max-width : 1239px) and (min-width: 1000px){
+  .notesContainer{
+  display: flex;
+ justify-content: space-around;
+}
+ 
+.heading{
+  font-size: 27px;
+}
+  .note{
+    width: 36%;
+  }
+
+.noteTime{
+  position: absolute;
+  left: 57%;
+}
+.noteDate{
+  text-align: center;
+  font-size: 17px;
+}
+
+}
+
+
+
+
+@media (max-width : 999px) and (min-width: 800px){
+   .notesContainer{
+  display: flex;
+ justify-content: space-around;
+}
+ 
+  .note{
+    width: 43%;
+  }
+.heading{
+  font-size: 29px;
+}
+
+.noteTime{
+  position: absolute;
+  left: 57%;
+}
+.noteDate{
+  text-align: center;
+  font-size: 17px;
+}
+
+.lies{
+  gap: 5px;
+}
+
+}
+
+
+@media (max-width : 799px) and (min-width : 600px){
+.notesContainer{
+ display: flex;
+ justify-content: space-around;
+}
+ 
+  .note{
+    width: 70%;
+  }
+.heading{
+  font-size: 40px;
+  width: 100%;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+.noteTime{
+  position: absolute;
+  left: 57%;
+}
+.noteDate{
+  text-align: center;
+  font-size: 17px;
+}
+
+.navbar{
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+ .lies {
+    width: 100%;
+    flex-direction: column;
+    font-size: 19px;
+    gap: 10px;
+  }
+
+input{
+    width: 55%;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-left: 14%;
+}
+.addBtn{
+    width: 15%;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+}
+
+@media (max-width : 599px) and (min-width: 400px){
+  .notesContainer{
+ display: flex;
+ justify-content: space-around;
+}
+ 
+  .note{
+    width: 90%;
+  }
+.heading{
+  font-size: 37px;
+  margin: auto;
+  padding-bottom: 20px;
+  font-weight: bolder;
+  width: 100%;
+}
+
+.noteTime{
+  position: absolute;
+  left: 57%;
+}
+.noteDate{
+  text-align: center;
+  font-size: 17px;
+}
+
+.navbar{
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+ .lies {
+    width: 100%;
+    flex-direction: column;
+    font-size: 19px;
+    gap: 10px;
+  }
+
+input{
+    width: 55%;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-left: 14%;
+}
+.addBtn{
+    width: 15%;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+}
+
+
+@media (max-width: 399px) and (min-width: 300px){
+  .notesContainer{
+ display: flex;
+ justify-content: space-around;
+}
+ 
+  .note{
+    width: 100%;
+  }
+.heading{
+  font-size: 25px;
+  margin: auto;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.noteTime{
+  position: absolute;
+  left: 57%;
+}
+.noteDate{
+  text-align: center;
+  font-size: 17px;
+}
+
+.navbar{
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+ .lies {
+    width: 100%;
+    flex-direction: column;
+    font-size: 19px;
+    gap: 10px;
+  }
+
+input{
+    width: 55%;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-left: 14%;
+}
+.addBtn{
+    width: 15%;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+}
+
+
+
+
+
+
+/* @media (max-width : 1290){
+
+} */
+
+
+
+
+/* ========== Large Screens: min-width 1280px ========== */
+/* @media (max-width: 1040px)  {
+  .note {
+    width: 28%;
+  }
+
+.heading{
+  font-size: 25px;
+}
+
+  .noteHeading,
+  .noteText,
+  .noteDate,
+  .noteTime {
+    font-size: 20px;
+  }
+
+  .upperDiv {
+    width: 63%;
+    left: 19%;
+  }
+} */
+
+/* 
+@media (min-width : 1042px){
+
+
+  .navbar {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .heading {
+    width: 100%;
+    font-size: 30px;
+    padding-top: 20px;
+  }
+
+  .lies {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+
+} */
+
+
+/* @media (max-width: 576px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .heading {
+    width: 100%;
+    font-size: 28px;
+    padding-top: 15px;
+  }
+
+  .lies {
+    width: 100%;
+    flex-direction: column;
+    font-size: 16px;
+    gap: 10px;
+  }
+
+  .inpBar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  input {
+    width: 80%;
+    margin-left: 0;
+  }
+
+  .addBtn {
+    width: 50%;
+    margin: 10px 0 0 0;
+  }
+
+  .note {
+    width: 90%;
+    height: auto;
+  }
+
+  .noteHeading,
+  .noteText,
+  .noteDate,
+  .noteTime {
+    font-size: 20px;
+  }
+
+  .upperDiv {
+    width: 90%;
+    left: 5%;
+  }
+} */
+
+/* ========== Tablets: max-width 768px ========== */
+/* @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .heading {
+    width: 100%;
+    font-size: 32px;
+    padding-top: 20px;
+  }
+
+  .lies {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  input {
+    width: 70%;
+    margin-left: 0;
+  }
+
+  .addBtn {
+    width: 25%;
+    margin-left: 5px;
+  }
+
+  .note {
+    width: 45%;
+    height: auto;
+  }
+
+  .noteHeading,
+  .noteText,
+  .noteDate,
+  .noteTime {
+    font-size: 22px;
+  }
+
+  .upperDiv {
+    width: 80%;
+    left: 10%;
+  }
+} */
+
+/* ========== Small Laptops: max-width 992px ========== */
+/* @media (max-width: 992px) {
+  input {
+    width: 40%;
+    margin-left: 5%;
+  }
+
+  .addBtn {
+    width: 20%;
+    margin-left: 10px;
+  }
+
+.lies >p{
+  margin-left: 10px;
+}
+
+  .note {
+    width: 30%;
+  }
+
+  .noteHeading,
+  .noteText,
+  .noteDate,
+  .noteTime {
+    font-size: 26px;
+  }
+
+  .upperDiv {
+    width: 70%;
+    left: 15%;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
