@@ -28,6 +28,7 @@
     min-width: 400px; 
     margin-right: 50px;
     display: flex;
+    gap: 20px;
     font-size: 21px;
     color: white;
     justify-content: space-evenly;
