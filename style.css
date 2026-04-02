@@ -4,37 +4,48 @@
     list-style: none;
     box-sizing: border-box;
 }
-.navbar{
+.navbar {
     width: 100%;
-    height: 15vh;
+    min-height: 15vh; /* Changed height to min-height */
     background-color: rgb(100, 163, 226);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center; /* Centering items vertically */
+    flex-wrap: wrap; /* Allows menu to drop down on mobile */
 }
-.heading{
+
+.heading {
     width: 30%;
-    height: 100%;
-    text-align: center;
     font-size: 40px;
     color: white;
-    font-family: 'KoHo', sans-serif;
-    padding-top: 45px;
+    font-family: 'KoHo', sans-serif;
     font-weight: bold;
+    text-align: center;
 }
-.lies{
-    width: 40%;
-    height: 100%;
+.lies {
+    /* Use auto or a larger % so it doesn't cramp on tablets */
+    width: auto; 
+    min-width: 400px; 
     display: flex;
     font-size: 21px;
     color: white;
     justify-content: space-evenly;
     align-items: center;
-    font-family: 'KoHo', sans-serif;
+    font-family: 'KoHo', sans-serif;
     cursor: pointer;
-    flex-wrap: wrap;
 }
-.lies > p:hover{
-  color: rgb(213, 197, 197);
+.lies > p:hover {
+    color: rgb(213, 197, 197);
+}
+
+/* --- Added: Toggle Button Style --- */
+
+.nav-toggle {
+    display: none; /* Hide on desktop */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    padding: 20px;
 }
 .inpBar{
     width: 100%;
@@ -184,30 +195,6 @@ input{
 
 
 
- /* @media (max-width: 1420px) and (min-width: 1000px){
-.navbar{
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: space-evenly;
-  border: 1px solid #000;
-}
-.heading{
-  font-size: 30px;
-  padding-: 30px;
-  border: 1px solid #342020;
-}
-.lies{
-margin-top: 30px;
-margin-left: 20px; 
-font-size: 20px;
-border: 1px solid #5c0a0a;
-}
-
-
-}  */
-
-
 @media (max-width : 1420px) and (min-width : 1240px){
  .notesContainer{
   display: flex;
@@ -236,9 +223,6 @@ border: 1px solid #5c0a0a;
  justify-content: space-around;
 }
  
-.heading{
-  font-size: 27px;
-}
   .note{
     width: 36%;
   }
@@ -266,9 +250,6 @@ border: 1px solid #5c0a0a;
   .note{
     width: 43%;
   }
-.heading{
-  font-size: 29px;
-}
 
 .noteTime{
   position: absolute;
@@ -278,11 +259,6 @@ border: 1px solid #5c0a0a;
   text-align: center;
   font-size: 17px;
 }
-
-.lies{
-  gap: 5px;
-}
-
 }
 
 
@@ -295,13 +271,6 @@ border: 1px solid #5c0a0a;
   .note{
     width: 70%;
   }
-.heading{
-  font-size: 40px;
-  width: 100%;
-  margin: auto;
-  padding-bottom: 20px;
-}
-
 .noteTime{
   position: absolute;
   left: 57%;
@@ -310,20 +279,6 @@ border: 1px solid #5c0a0a;
   text-align: center;
   font-size: 17px;
 }
-
-.navbar{
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
- .lies {
-    width: 100%;
-    flex-direction: column;
-    font-size: 19px;
-    gap: 10px;
-  }
-
 input{
     width: 55%;
     height: 45px;
@@ -351,14 +306,6 @@ input{
   .note{
     width: 90%;
   }
-.heading{
-  font-size: 37px;
-  margin: auto;
-  padding-bottom: 20px;
-  font-weight: bolder;
-  width: 100%;
-}
-
 .noteTime{
   position: absolute;
   left: 57%;
@@ -367,20 +314,6 @@ input{
   text-align: center;
   font-size: 17px;
 }
-
-.navbar{
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
- .lies {
-    width: 100%;
-    flex-direction: column;
-    font-size: 19px;
-    gap: 10px;
-  }
-
 input{
     width: 55%;
     height: 45px;
@@ -409,13 +342,6 @@ input{
   .note{
     width: 100%;
   }
-.heading{
-  font-size: 25px;
-  margin: auto;
-  width: 100%;
-  padding-bottom: 20px;
-}
-
 .noteTime{
   position: absolute;
   left: 57%;
@@ -424,20 +350,6 @@ input{
   text-align: center;
   font-size: 17px;
 }
-
-.navbar{
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
- .lies {
-    width: 100%;
-    flex-direction: column;
-    font-size: 19px;
-    gap: 10px;
-  }
-
 input{
     width: 55%;
     height: 45px;
@@ -457,215 +369,45 @@ input{
 }
 
 
+@media (max-width: 1280px) { /* Increased from 768px */
+    .navbar {
+        flex-wrap: wrap; 
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
 
+    .heading {
+        width: auto !important;
+        font-size: 28px; /* Slightly larger for tablets */
+        order: 1;
+    }
 
+    .nav-toggle {
+        display: block !important;
+        order: 2;
+    }
 
+    .lies {
+        display: flex;
+        width: 100% !important; /* Force to new line */
+        order: 3;
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+        background-color: rgb(100, 163, 226);
+    }
 
-/* @media (max-width : 1290){
+    .lies.active {
+        max-height: 500px;
+        padding: 20px 0;
+    }
 
-} */
-
-
-
-
-/* ========== Large Screens: min-width 1280px ========== */
-/* @media (max-width: 1040px)  {
-  .note {
-    width: 28%;
-  }
-
-.heading{
-  font-size: 25px;
+    /* Make the links look better on the vertical tablet menu */
+    .lies p {
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
 }
-
-  .noteHeading,
-  .noteText,
-  .noteDate,
-  .noteTime {
-    font-size: 20px;
-  }
-
-  .upperDiv {
-    width: 63%;
-    left: 19%;
-  }
-} */
-
-/* 
-@media (min-width : 1042px){
-
-
-  .navbar {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .heading {
-    width: 100%;
-    font-size: 30px;
-    padding-top: 20px;
-  }
-
-  .lies {
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-
-} */
-
-
-/* @media (max-width: 576px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
-  .heading {
-    width: 100%;
-    font-size: 28px;
-    padding-top: 15px;
-  }
-
-  .lies {
-    width: 100%;
-    flex-direction: column;
-    font-size: 16px;
-    gap: 10px;
-  }
-
-  .inpBar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 0;
-  }
-
-  input {
-    width: 80%;
-    margin-left: 0;
-  }
-
-  .addBtn {
-    width: 50%;
-    margin: 10px 0 0 0;
-  }
-
-  .note {
-    width: 90%;
-    height: auto;
-  }
-
-  .noteHeading,
-  .noteText,
-  .noteDate,
-  .noteTime {
-    font-size: 20px;
-  }
-
-  .upperDiv {
-    width: 90%;
-    left: 5%;
-  }
-} */
-
-/* ========== Tablets: max-width 768px ========== */
-/* @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .heading {
-    width: 100%;
-    font-size: 32px;
-    padding-top: 20px;
-  }
-
-  .lies {
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  input {
-    width: 70%;
-    margin-left: 0;
-  }
-
-  .addBtn {
-    width: 25%;
-    margin-left: 5px;
-  }
-
-  .note {
-    width: 45%;
-    height: auto;
-  }
-
-  .noteHeading,
-  .noteText,
-  .noteDate,
-  .noteTime {
-    font-size: 22px;
-  }
-
-  .upperDiv {
-    width: 80%;
-    left: 10%;
-  }
-} */
-
-/* ========== Small Laptops: max-width 992px ========== */
-/* @media (max-width: 992px) {
-  input {
-    width: 40%;
-    margin-left: 5%;
-  }
-
-  .addBtn {
-    width: 20%;
-    margin-left: 10px;
-  }
-
-.lies >p{
-  margin-left: 10px;
-}
-
-  .note {
-    width: 30%;
-  }
-
-  .noteHeading,
-  .noteText,
-  .noteDate,
-  .noteTime {
-    font-size: 26px;
-  }
-
-  .upperDiv {
-    width: 70%;
-    left: 15%;
-  }
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
