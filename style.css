@@ -4,6 +4,8 @@
     list-style: none;
     box-sizing: border-box;
 }
+/* --- Desktop Styles (Your Original with tweaks) --- */
+
 .navbar {
     width: 100%;
     min-height: 15vh; /* Changed height to min-height */
@@ -21,6 +23,7 @@
     font-family: 'KoHo', sans-serif;
     font-weight: bold;
     text-align: center;
+    /* border: 1px solid red; */
 }
 .lies {
     /* Use auto or a larger % so it doesn't cramp on tablets */
@@ -36,6 +39,7 @@
     font-family: 'KoHo', sans-serif;
     cursor: pointer;
 }
+
 .lies > p:hover {
     color: rgb(213, 197, 197);
 }
@@ -49,6 +53,9 @@
     cursor: pointer;
     padding: 20px;
 }
+
+/* --- Mobile Styles (The "Smooth" Magic) --- */
+
 .inpBar{
     width: 100%;
     height: 13vh;
@@ -197,180 +204,34 @@ input{
 
 
 
-@media (max-width : 1420px) and (min-width : 1240px){
- .notesContainer{
+ /* @media (max-width: 1420px) and (min-width: 1000px){
+.navbar{
+  width: 100%;
+  height: auto;
   display: flex;
- justify-content: flex-start , space-evenly;
+  justify-content: space-evenly;
+  border: 1px solid #000;
 }
- 
-  .note{
-    width: 29%;
-  }
-
-.noteTime{
-  position: absolute;
-  left: 57%;
+.heading{
+  font-size: 30px;
+  padding-: 30px;
+  border: 1px solid #342020;
 }
-.noteDate{
-  text-align: center;
-}
-
+.lies{
+margin-top: 30px;
+margin-left: 20px; 
+font-size: 20px;
+border: 1px solid #5c0a0a;
 }
 
 
+}  */
+/*  */
 
-@media (max-width : 1239px) and (min-width: 1000px){
-  .notesContainer{
-  display: flex;
- justify-content: space-around;
-}
- 
-  .note{
-    width: 36%;
-  }
-
-.noteTime{
-  position: absolute;
-  left: 57%;
-}
-.noteDate{
-  text-align: center;
-  font-size: 17px;
-}
-
-}
+/* --- Desktop/Large Tablet Styles --- */
 
 
-
-
-@media (max-width : 999px) and (min-width: 800px){
-   .notesContainer{
-  display: flex;
- justify-content: space-around;
-}
- 
-  .note{
-    width: 43%;
-  }
-
-.noteTime{
-  position: absolute;
-  left: 57%;
-}
-.noteDate{
-  text-align: center;
-  font-size: 17px;
-}
-}
-
-
-@media (max-width : 799px) and (min-width : 600px){
-.notesContainer{
- display: flex;
- justify-content: space-around;
-}
- 
-  .note{
-    width: 70%;
-  }
-.noteTime{
-  position: absolute;
-  left: 57%;
-}
-.noteDate{
-  text-align: center;
-  font-size: 17px;
-}
-input{
-    width: 55%;
-    height: 45px;
-    border-radius: 10px;
-    font-size: 20px;
-    padding-left: 10px;
-    margin-left: 14%;
-}
-.addBtn{
-    width: 15%;
-    height: 45px;
-    border-radius: 10px;
-    font-size: 20px;
-    margin-left: 10px;
-    cursor: pointer;
-}
-}
-
-@media (max-width : 599px) and (min-width: 400px){
-  .notesContainer{
- display: flex;
- justify-content: space-around;
-}
- 
-  .note{
-    width: 90%;
-  }
-.noteTime{
-  position: absolute;
-  left: 57%;
-}
-.noteDate{
-  text-align: center;
-  font-size: 17px;
-}
-input{
-    width: 55%;
-    height: 45px;
-    border-radius: 10px;
-    font-size: 20px;
-    padding-left: 10px;
-    margin-left: 14%;
-}
-.addBtn{
-    width: 15%;
-    height: 45px;
-    border-radius: 10px;
-    font-size: 20px;
-    margin-left: 10px;
-    cursor: pointer;
-}
-}
-
-
-@media (max-width: 399px) and (min-width: 300px){
-  .notesContainer{
- display: flex;
- justify-content: space-around;
-}
- 
-  .note{
-    width: 100%;
-  }
-.noteTime{
-  position: absolute;
-  left: 57%;
-}
-.noteDate{
-  text-align: center;
-  font-size: 17px;
-}
-input{
-    width: 55%;
-    height: 45px;
-    border-radius: 10px;
-    font-size: 20px;
-    padding-left: 10px;
-    margin-left: 14%;
-}
-.addBtn{
-    width: 15%;
-    height: 45px;
-    border-radius: 10px;
-    font-size: 20px;
-    margin-left: 10px;
-    cursor: pointer;
-}
-}
-
-
+/* --- Tablet & Mobile Styles --- */
 @media (max-width: 1280px) { /* Increased from 768px */
     .navbar {
         flex-wrap: wrap; 
@@ -413,3 +274,470 @@ input{
         margin: 0;
     }
 }
+
+
+
+/*  */
+
+
+@media (max-width : 1420px) and (min-width : 1240px){
+ .notesContainer{
+  display: flex;
+ justify-content: flex-start , space-evenly;
+}
+ 
+  .note{
+    width: 29%;
+  }
+
+.noteTime{
+  position: absolute;
+  left: 57%;
+}
+.noteDate{
+  text-align: center;
+}
+
+}
+
+
+
+@media (max-width : 1239px) and (min-width: 1000px){
+  .notesContainer{
+  display: flex;
+ justify-content: space-around;
+}
+ 
+/* .heading{
+  font-size: 27px;
+} */
+  .note{
+    width: 36%;
+  }
+
+.noteTime{
+  position: absolute;
+  left: 57%;
+}
+.noteDate{
+  text-align: center;
+  font-size: 17px;
+}
+
+}
+
+
+
+
+@media (max-width : 999px) and (min-width: 800px){
+   .notesContainer{
+  display: flex;
+ justify-content: space-around;
+}
+ 
+  .note{
+    width: 43%;
+  }
+/* .heading{
+  font-size: 29px;
+} */
+
+.noteTime{
+  position: absolute;
+  left: 57%;
+}
+.noteDate{
+  text-align: center;
+  font-size: 17px;
+}
+
+/* .lies{
+  gap: 5px;
+} */
+
+}
+
+
+@media (max-width : 799px) and (min-width : 600px){
+.notesContainer{
+ display: flex;
+ justify-content: space-around;
+}
+ 
+  .note{
+    width: 70%;
+  }
+/* .heading{
+  font-size: 40px;
+  width: 100%;
+  margin: auto;
+  padding-bottom: 20px;
+} */
+
+.noteTime{
+  position: absolute;
+  left: 57%;
+}
+.noteDate{
+  text-align: center;
+  font-size: 17px;
+}
+
+/* .navbar{
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  } */
+
+ /* .lies {
+    width: 100%;
+    flex-direction: column;
+    font-size: 19px;
+    gap: 10px;
+  } */
+
+input{
+    width: 55%;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-left: 14%;
+}
+.addBtn{
+    width: 15%;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+}
+
+@media (max-width : 599px) and (min-width: 400px){
+  .notesContainer{
+ display: flex;
+ justify-content: space-around;
+}
+ 
+  .note{
+    width: 90%;
+  }
+/* .heading{
+  font-size: 37px;
+  margin: auto;
+  padding-bottom: 20px;
+  font-weight: bolder;
+  width: 100%;
+} */
+
+.noteTime{
+  position: absolute;
+  left: 57%;
+}
+.noteDate{
+  text-align: center;
+  font-size: 17px;
+}
+
+/* .navbar{
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  } */
+/* 
+ .lies {
+    width: 100%;
+    flex-direction: column;
+    font-size: 19px;
+    gap: 10px;
+  } */
+
+input{
+    width: 55%;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-left: 14%;
+}
+.addBtn{
+    width: 15%;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+}
+
+
+@media (max-width: 399px) and (min-width: 300px){
+  .notesContainer{
+ display: flex;
+ justify-content: space-around;
+}
+ 
+  .note{
+    width: 100%;
+  }
+/* .heading{
+  font-size: 25px;
+  margin: auto;
+  width: 100%;
+  padding-bottom: 20px;
+} */
+
+.noteTime{
+  position: absolute;
+  left: 57%;
+}
+.noteDate{
+  text-align: center;
+  font-size: 17px;
+}
+
+/* .navbar{
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  } */
+
+ /* .lies {
+    width: 100%;
+    flex-direction: column;
+    font-size: 19px;
+    gap: 10px;
+  } */
+
+input{
+    width: 55%;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-left: 14%;
+}
+.addBtn{
+    width: 15%;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+}
+
+
+
+
+
+
+/* @media (max-width : 1290){
+
+} */
+
+
+
+
+/* ========== Large Screens: min-width 1280px ========== */
+/* @media (max-width: 1040px)  {
+  .note {
+    width: 28%;
+  }
+
+.heading{
+  font-size: 25px;
+}
+
+  .noteHeading,
+  .noteText,
+  .noteDate,
+  .noteTime {
+    font-size: 20px;
+  }
+
+  .upperDiv {
+    width: 63%;
+    left: 19%;
+  }
+} */
+
+/* 
+@media (min-width : 1042px){
+
+
+  .navbar {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .heading {
+    width: 100%;
+    font-size: 30px;
+    padding-top: 20px;
+  }
+
+  .lies {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+
+} */
+
+
+/* @media (max-width: 576px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .heading {
+    width: 100%;
+    font-size: 28px;
+    padding-top: 15px;
+  }
+
+  .lies {
+    width: 100%;
+    flex-direction: column;
+    font-size: 16px;
+    gap: 10px;
+  }
+
+  .inpBar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  input {
+    width: 80%;
+    margin-left: 0;
+  }
+
+  .addBtn {
+    width: 50%;
+    margin: 10px 0 0 0;
+  }
+
+  .note {
+    width: 90%;
+    height: auto;
+  }
+
+  .noteHeading,
+  .noteText,
+  .noteDate,
+  .noteTime {
+    font-size: 20px;
+  }
+
+  .upperDiv {
+    width: 90%;
+    left: 5%;
+  }
+} */
+
+/* ========== Tablets: max-width 768px ========== */
+/* @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .heading {
+    width: 100%;
+    font-size: 32px;
+    padding-top: 20px;
+  }
+
+  .lies {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  input {
+    width: 70%;
+    margin-left: 0;
+  }
+
+  .addBtn {
+    width: 25%;
+    margin-left: 5px;
+  }
+
+  .note {
+    width: 45%;
+    height: auto;
+  }
+
+  .noteHeading,
+  .noteText,
+  .noteDate,
+  .noteTime {
+    font-size: 22px;
+  }
+
+  .upperDiv {
+    width: 80%;
+    left: 10%;
+  }
+} */
+
+/* ========== Small Laptops: max-width 992px ========== */
+/* @media (max-width: 992px) {
+  input {
+    width: 40%;
+    margin-left: 5%;
+  }
+
+  .addBtn {
+    width: 20%;
+    margin-left: 10px;
+  }
+
+.lies >p{
+  margin-left: 10px;
+}
+
+  .note {
+    width: 30%;
+  }
+
+  .noteHeading,
+  .noteText,
+  .noteDate,
+  .noteTime {
+    font-size: 26px;
+  }
+
+  .upperDiv {
+    width: 70%;
+    left: 15%;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
