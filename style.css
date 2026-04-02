@@ -26,6 +26,7 @@
     /* Use auto or a larger % so it doesn't cramp on tablets */
     width: auto; 
     min-width: 400px; 
+    margin-right: 50px;
     display: flex;
     font-size: 21px;
     color: white;
