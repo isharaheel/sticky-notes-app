@@ -1,21 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
 const navToggle = document.getElementById('navToggle');
-const navMenu = document.getElementById('navMenu');
-const toggleIcon = navToggle.querySelector('i');
+    const navMenu = document.getElementById('navMenu');
+    const toggleIcon = navToggle.querySelector('i');
 
-navToggle.addEventListener('click', () => {
-    // Toggles the 'active' class for the slide effect
-    navMenu.classList.toggle('active');
+    if (navToggle && navMenu) { // Safety check
+        navToggle.addEventListener('click', () => {
+            // Toggles the 'active' class for the slide effect
+            navMenu.classList.toggle('active');
 
-    // Smoothly switch between the 'bars' and 'x' icon
-    if (navMenu.classList.contains('active')) {
-        toggleIcon.classList.replace('fa-bars', 'fa-xmark');
-    } else {
-        toggleIcon.classList.replace('fa-xmark', 'fa-bars');
+            // Smoothly switch between the 'bars' and 'x' icon
+            if (navMenu.classList.contains('active')) {
+                toggleIcon.classList.replace('fa-bars', 'fa-xmark');
+            } else {
+                toggleIcon.classList.replace('fa-xmark', 'fa-bars');
+            }
+        });
     }
-});
-
-  
   let inp = document.querySelectorAll('input')[0];
   let addBtn = document.getElementsByClassName('addBtn')[0];
   let display = document.querySelector('.notesContainer');
